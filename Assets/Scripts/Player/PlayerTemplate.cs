@@ -14,6 +14,7 @@ public class PlayerTemplate
     private int healingSpeed;
     private string typeOfDisease;
     private float percentageOfIllness;
+    private float damageMultiplier;
 
     // Berkaitan dengan perkuliahan
     private int intelligenceLevel;
@@ -22,8 +23,8 @@ public class PlayerTemplate
     private int intelligencePoints;
 
     public PlayerTemplate(
-        int energy, int largeFoodNeeds, int money, int health, 
-        int healingSpeed, string typeOfDisease, float percentageOfIllness, 
+        int energy, int largeFoodNeeds, int money, 
+        int health, int healingSpeed, string typeOfDisease, float percentageOfIllness, float damageMultiplier, 
         int intelligenceLevel, int creativityLevel, int creativityPoints, int intelligencePoints)
     {
         this.energy = energy;
@@ -33,6 +34,7 @@ public class PlayerTemplate
         this.healingSpeed = healingSpeed;
         this.typeOfDisease = typeOfDisease;
         this.percentageOfIllness = percentageOfIllness;
+        this.damageMultiplier = damageMultiplier;
         this.intelligenceLevel = intelligenceLevel;
         this.creativityLevel = creativityLevel;
         this.creativityPoints = creativityPoints;
@@ -46,6 +48,7 @@ public class PlayerTemplate
     public int HealingSpeed { get => healingSpeed; set => healingSpeed = value; }
     public string TypeOfDisease { get => typeOfDisease; set => typeOfDisease = value; }
     public float PercentageOfIllness { get => percentageOfIllness; set => percentageOfIllness = value; }
+    public float DamageMultiplier { get => damageMultiplier; set => damageMultiplier = value; }
     public int IntelligenceLevel { get => intelligenceLevel; set => intelligenceLevel = value; }
     public int CreativityLevel { get => creativityLevel; set => creativityLevel = value; }
     public int CreativityPoints { get => creativityPoints; set => creativityPoints = value; }

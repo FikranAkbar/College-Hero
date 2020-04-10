@@ -6,7 +6,7 @@ public class PlayerStats : MonoBehaviour
 {
 
     public GameObject MainmenuManager;
-    public PlayerTemplate Character;
+    public PlayerTemplate CharacterStats;
 
     void Start()
     {
@@ -28,15 +28,15 @@ public class PlayerStats : MonoBehaviour
     {
         if (number == 1)
         {
-            Character = new PlayerTemplate(100, 0, 10, 100, 15, "-", 0, 1, 1, 0, 0);
+            CharacterStats = new PlayerTemplate(100, 0, 10, 100, 15, "-", 0, 0.5f, 1, 1, 0, 0);
         } 
         else if (number == 2)
         {
-            Character = new PlayerTemplate(100, 0, 50, 100, 10, "-", 0, 1, 1, 0, 0);
+            CharacterStats = new PlayerTemplate(100, 0, 50, 100, 10, "-", 0, 1f, 1, 1, 0, 0);
         }
         else if (number == 3)
         {
-            Character = new PlayerTemplate(100, 0, 50, 100, 5, "-", 0, 1, 1, 0, 0);
+            CharacterStats = new PlayerTemplate(100, 0, 50, 100, 5, "-", 0, 1.5f, 1, 1, 0, 0);
         }
     }
 }
