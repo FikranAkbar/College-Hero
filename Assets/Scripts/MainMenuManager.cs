@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -34,7 +35,9 @@ public class MainMenuManager : MonoBehaviour
 
     public void StartGame()
     {
-
+        GenerateCharacterFromNewGame(selectedRole);
+        GameObject.Find("Player").GetComponent<PlayerStats>().OnChangedScene();
+        SceneManager.LoadScene("Gameplay");
     }
 
     public void ChooseAnakDesa()
@@ -52,7 +55,7 @@ public class MainMenuManager : MonoBehaviour
         selectedRole = 3;
     }
     
-    public void GenerateCharacterFromNewGame()
+    public void GenerateCharacterFromNewGame(int selectedRole)
     {
         GameObject.Find("Player").GetComponent<PlayerStats>().GenerateCharacter(selectedRole);
     }
