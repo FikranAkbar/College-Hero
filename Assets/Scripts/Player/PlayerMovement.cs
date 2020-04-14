@@ -15,13 +15,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 pos = transform.position;
-
-        pos.y = Mathf.Clamp(pos.y, -6, 6);
-
-        pos.x = Mathf.Clamp(pos.x, -10, 10);
-
-        transform.position = pos;
+        CamFollowCharacter();
     }
 
     private void FixedUpdate()
@@ -29,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
         MoveCharacter();
     }
 
+    
     private void MoveCharacter()
     {
         if (Input.GetKey(KeyCode.W))
@@ -47,5 +42,16 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.Translate(-speed, 0, 0);
         }
+    }
+
+    private void CamFollowCharacter()
+    {
+        Vector3 pos = transform.position;
+
+        pos.y = Mathf.Clamp(pos.y, -6, 6);
+
+        pos.x = Mathf.Clamp(pos.x, -10, 10);
+
+        transform.position = pos;
     }
 }

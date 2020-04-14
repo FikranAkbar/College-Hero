@@ -21,11 +21,12 @@ public class PlayerTemplate
     private int creativityLevel;
     private int creativityPoints;
     private int intelligencePoints;
+    private int days;
 
     public PlayerTemplate(
         int energy, int largeFoodNeeds, int money, 
         int health, int healingSpeed, string typeOfDisease, float percentageOfIllness, float damageMultiplier, 
-        int intelligenceLevel, int creativityLevel, int creativityPoints, int intelligencePoints)
+        int intelligenceLevel, int creativityLevel, int creativityPoints, int intelligencePoints, int days = 1)
     {
         this.energy = energy;
         this.largeFoodNeeds = largeFoodNeeds;
@@ -39,6 +40,7 @@ public class PlayerTemplate
         this.creativityLevel = creativityLevel;
         this.creativityPoints = creativityPoints;
         this.intelligencePoints = intelligencePoints;
+        this.days = days;
     }
 
     public int Energy { get => energy; set => energy = value; }
@@ -53,4 +55,5 @@ public class PlayerTemplate
     public int CreativityLevel { get => creativityLevel; set => creativityLevel = value; }
     public int CreativityPoints { get => creativityPoints; set => creativityPoints = value; }
     public int IntelligencePoints { get => intelligencePoints; set => intelligencePoints = value; }
+    public int Days { get => Days; set => intelligencePoints = value; }
 }

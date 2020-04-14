@@ -1,0 +1,55 @@
+[33mcommit de7b11587cbb220ef03efe0751f65f52bb92131a[m[33m ([m[1;36mHEAD -> [m[1;32mmockup01[m[33m, [m[1;32mMaster[m[33m)[m
+Author: Fikran Akbar <fikranakbar756@gmail.com>
+Date:   Fri Apr 10 13:15:29 2020 +0700
+
+    Mockup 1 telah selesai
+
+[33mcommit 074ae7d05fccc5c80473b17905f199926d18689b[m
+Author: Fikran Akbar <fikranakbar756@gmail.com>
+Date:   Fri Apr 10 12:51:45 2020 +0700
+
+    Sudah berhasil generate role karakter ?
+
+[33mcommit 6ab18d473715e468c4cf1c9e90bd5ee2d0b8c317[m
+Author: Fikran Akbar <fikranakbar756@gmail.com>
+Date:   Fri Apr 10 12:43:06 2020 +0700
+
+    Mencoba menggunakan script template untuk membuat role system
+
+[33mcommit 0723d29a066d160d32311095ef1ffa7cdff565ae[m
+Author: Fikran Akbar <fikranakbar756@gmail.com>
+Date:   Thu Apr 9 18:31:53 2020 +0700
+
+    Memulai Mockup01
+
+[33mcommit 99d8187390e392bc49b3d1a654512468fdeca8d0[m
+Author: Fikran Akbar <fikranakbar756@gmail.com>
+Date:   Wed Apr 8 21:55:55 2020 +0700
+
+    Revert "Menambahkan gitattributes untuk Large File System"
+    
+    This reverts commit 7286c93cdf30d490aebcda3fd3cea6d046d3c1cb.
+
+[33mcommit 32c7c938fc735cb275deabacea2c72c677bad997[m
+Author: Fikran Akbar <fikranakbar756@gmail.com>
+Date:   Wed Apr 8 21:46:49 2020 +0700
+
+    Mencoba gitattributes
+
+[33mcommit 7286c93cdf30d490aebcda3fd3cea6d046d3c1cb[m
+Author: Fikran Akbar <fikranakbar756@gmail.com>
+Date:   Wed Apr 8 21:45:09 2020 +0700
+
+    Menambahkan gitattributes untuk Large File System
+
+[33mcommit 3455a9eddcb179f33ea4914de9a57e159188e538[m
+Author: Fikran Akbar <fikranakbar756@gmail.com>
+Date:   Wed Apr 8 21:37:08 2020 +0700
+
+    cek git ignorenya bisa ndak
+
+[33mcommit fe8ef9842064015cf87836dd107ab7d20cacc665[m
+Author: Fikran Akbar <fikranakbar756@gmail.com>
+Date:   Wed Apr 8 21:09:20 2020 +0700
+
+    Memulai projek dan setting git ignore
