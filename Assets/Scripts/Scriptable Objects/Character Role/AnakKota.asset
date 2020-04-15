@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee3fff42a9702f4b8c3f5bd7d322b70, type: 3}
   m_Name: AnakKota
   m_EditorClassIdentifier: 
-  charName: 
   money: 50
   multiplierFactor: 1
-  health: 100
   healthInc: 10
+  charDesc: 'Anak Kota
+
+    Ini paragraph anak kota'
+  charImage: {fileID: 21300000, guid: 447fe1a539c2823429a8c69972ebbbe9, type: 3}
