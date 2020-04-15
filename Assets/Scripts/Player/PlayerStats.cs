@@ -5,6 +5,10 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     private PlayerStatsTemplate Status;
+    
+    [SerializeField] List<RoleCharacter> RoleCharacters;
+
+    [SerializeField] private float speed;
 
     private void Start()
     {
@@ -21,22 +25,22 @@ public class PlayerStats : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        transform.Translate(moveHorizontal, moveVertical, 0);
+        transform.Translate(
+            Mathf.Clamp(moveHorizontal * speed, -1, 1), 
+            Mathf.Clamp(moveVertical * speed, -1, 1), 
+            0);
     }
 
     public void GenerateRoleCharacter(int index)
     {
-        if (index == 0)
-        {
-            Status.CreateAnakDesa();
-        }
-        else if (index == 1)
-        {
-            Status.CreateAnakKota();
-        }
-        else if (index == 2)
-        {
-            Status.CreateAnakSultan();
-        }
+        Status.moneyGift = RoleCharacters[index].moneyGift;
+        Status.healingSpeed = RoleCharacters[index].healthInc;
+        Status.damageMultiplier = RoleCharacters[index].multiplierFactor;
+        GetComponent<SpriteRenderer>().sprite = RoleCharacters[index].charImage;
+    }
+
+    private void OnDestroy()
+    {
+        DontDestroyOnLoad(gameObject);
     }
 }

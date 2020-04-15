@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class MainmenuManager : MonoBehaviour
 {
@@ -13,8 +14,7 @@ public class MainmenuManager : MonoBehaviour
     [SerializeField] Image charImage;
     [SerializeField] TextMeshProUGUI charDesc;
 
-    [SerializeField] GameObject LeftButton;
-    [SerializeField] GameObject RightButton;
+    [SerializeField] GameObject Player;
 
     // Start is called before the first frame update
     void Start()
@@ -52,5 +52,13 @@ public class MainmenuManager : MonoBehaviour
     {
         charImage.sprite = roleCharacters[indexChooseRole].charImage;
         charDesc.text = roleCharacters[indexChooseRole].charDesc;
+    }
+
+    public void Click_StartButton()
+    {
+        Player.GetComponent<PlayerStats>().GenerateRoleCharacter(indexChooseRole);
+        Player.transform.position = new Vector2(0, 0);
+        DontDestroyOnLoad(Player);
+        SceneManager.LoadScene("Perkuliahan");
     }
 }

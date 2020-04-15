@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class PlayerStatsTemplate
 {
-    public RoleCharacter AnakDesa;
-    public RoleCharacter AnakKota;
-    public RoleCharacter AnakSultan;
+    public Sprite charImage;
 
     //Berkaitan dengan kehidupan sehari-hari
     public int energy;
@@ -47,25 +45,5 @@ public class PlayerStatsTemplate
         CreativityLevel = creativityLevel;
         this.intelligencePoints = intelligencePoints;
         CreativityPoints = creativityPoints;
-    }
-
-    public void CreateAnakDesa()
-    {
-        this.money = AnakDesa.moneyGift;
-        this.healingSpeed = AnakDesa.healthInc;
-        this.damageMultiplier = AnakDesa.multiplierFactor;
-    }
-
-    public void CreateAnakKota()
-    {
-        this.money = AnakKota.moneyGift;
-        this.healingSpeed = AnakKota.healthInc;
-        this.damageMultiplier = AnakKota.multiplierFactor;
-    }
-    public void CreateAnakSultan()
-    {
-        this.money = AnakSultan.moneyGift;
-        this.healingSpeed = AnakSultan.healthInc;
-        this.damageMultiplier = AnakSultan.multiplierFactor;
     }
 }
