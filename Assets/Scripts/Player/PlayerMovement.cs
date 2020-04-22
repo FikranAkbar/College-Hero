@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+    [SerializeField] Animator animator;
     [SerializeField] float speed;
-    float dirX, dirY;
+
+    Vector2 movement;
     Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -18,8 +20,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dirX = Input.GetAxis("Horizontal") * speed;
-        dirY = Input.GetAxis("Vertical") * speed;
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.SqrMagnitude());
     }
 
     private void FixedUpdate()
@@ -29,6 +35,6 @@ public class PlayerMovement : MonoBehaviour
 
     void MoveCharacter()
     {
-        rb.velocity = new Vector3(dirX, dirY);
+        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
     }
 }
