@@ -9,6 +9,20 @@ public class ChangeSceneManager : MonoBehaviour
     [SerializeField] static GameObject player;
     static Dictionary<string, Vector2> spawnLocation = new Dictionary<string, Vector2>() { };
 
+    public static ChangeSceneManager changeSceneManagerInstance;
+
+    private void Awake()
+    {
+        if(changeSceneManagerInstance == null)
+        {
+            changeSceneManagerInstance = this;
+            DontDestroyOnLoad(gameObject);
+        } else if (changeSceneManagerInstance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

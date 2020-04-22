@@ -6,15 +6,26 @@ public class CamFollow : MonoBehaviour
 {
     [SerializeField] Transform TargetToFollow;
 
+    public static CamFollow camFollowInstance;
+
     private void Awake()
     {
-        DontDestroyOnLoad(this);
+        if(camFollowInstance == null)
+        {
+            camFollowInstance = this;
+            DontDestroyOnLoad(gameObject);
+        } else if(camFollowInstance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        TargetToFollow = GameObject.Find("Character").transform;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        TargetToFollow = GameObject.Find("Character").transform;
+        
     }
 
     // Update is called once per frame

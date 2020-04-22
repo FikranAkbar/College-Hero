@@ -11,9 +11,19 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     Rigidbody2D rb;
 
+    public static PlayerMovement playerMovementInstance;
+
     private void Awake()
     {
-        DontDestroyOnLoad(this);
+        if (playerMovementInstance == null)
+        {
+            playerMovementInstance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (playerMovementInstance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Start is called before the first frame update
