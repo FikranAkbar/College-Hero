@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
 
     public static PlayerMovement playerMovementInstance;
+    public static string toPos = "default";
 
     private void Awake()
     {
@@ -30,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     // Update is called once per frame
@@ -53,6 +56,8 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
     }
 
-    
-
+    private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
+    {
+        transform.position = ChangeSceneManager.spawnLocation[ChangeSceneManager.toPos];
+    }
 }

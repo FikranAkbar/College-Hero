@@ -21,6 +21,7 @@ public class PlayerChangeScene : MonoBehaviour
         if(collision.tag == "1To2")
         {
             ChangeSceneManager.ChangeArea_OutdoorToOutdoor(1, 2);
+          
         } else if (collision.tag == "1To3")
         {
             ChangeSceneManager.ChangeArea_OutdoorToOutdoor(1, 3);

@@ -7,9 +7,9 @@ public class ChangeSceneManager : MonoBehaviour
 {
 
     [SerializeField] static GameObject player;
-    static Dictionary<string, Vector2> spawnLocation = new Dictionary<string, Vector2>() { };
-
     public static ChangeSceneManager changeSceneManagerInstance;
+    public static string toPos = "default";
+    public static Dictionary<string, Vector2> spawnLocation = new Dictionary<string, Vector2>() { };
 
     private void Awake()
     {
@@ -26,7 +26,7 @@ public class ChangeSceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Character");
+        spawnLocation.Add("default", new Vector2(-6.36f, 5.52f));
         spawnLocation.Add("1To2", new Vector2(-12.39f, -0.53f));
         spawnLocation.Add("1To3", new Vector2(-13.68f, 9.47f));
         spawnLocation.Add("2To1", new Vector2(11.5f, -0.86f));
@@ -47,39 +47,39 @@ public class ChangeSceneManager : MonoBehaviour
         {
             if(to == 2)
             {
-                SceneManager.LoadScene("Maps_AreaTaman");
-                player.transform.position = spawnLocation["1To2"];
+                Initiate.Fade("Maps_AreaTaman", Color.black, 2.0f);
+                toPos = "1To2";
             }
             else if (to == 3)
             {
-                SceneManager.LoadScene("Maps_AreaUniversitas");
-                player.transform.position = spawnLocation["1To3"];
+                Initiate.Fade("Maps_AreaUniversitas", Color.black, 2.0f);
+                toPos = "1To3";
             }
 
         } else if (from == 2)
         {
             if (to == 1)
             {
-                SceneManager.LoadScene("Maps_AreaKota");
-                player.transform.position = spawnLocation["2To1"];
+                Initiate.Fade("Maps_AreaKota", Color.black, 2.0f);
+                toPos = "2To1";
             }
             else if (to == 3)
             {
-                SceneManager.LoadScene("Maps_AreaUniversitas");
-                player.transform.position = spawnLocation["2To3"];
+                Initiate.Fade("Maps_AreaUniversitas", Color.black, 2.0f);
+                toPos = "2To3";
             }
 
         } else if (from == 3)
         {
             if (to == 1)
             {
-                SceneManager.LoadScene("Maps_AreaKota");
-                player.transform.position = spawnLocation["3To1"];
+                Initiate.Fade("Maps_AreaKota", Color.black, 2.0f);
+                toPos = "3To1";
             }
             else if (to == 2)
             {
-                SceneManager.LoadScene("Maps_AreaTaman");
-                player.transform.position = spawnLocation["3To2"];
+                Initiate.Fade("Maps_AreaTaman", Color.black, 2.0f);
+                toPos = "3To2";
             }
         }
     }
