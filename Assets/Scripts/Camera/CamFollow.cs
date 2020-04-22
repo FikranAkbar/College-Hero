@@ -5,10 +5,16 @@ using UnityEngine;
 public class CamFollow : MonoBehaviour
 {
     [SerializeField] Transform TargetToFollow;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        TargetToFollow = GameObject.Find("Character").transform;
     }
 
     // Update is called once per frame
