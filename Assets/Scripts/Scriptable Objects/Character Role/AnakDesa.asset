@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee3fff42a9702f4b8c3f5bd7d322b70, type: 3}
   m_Name: AnakDesa
   m_EditorClassIdentifier: 
+  type: Anak Desa
   moneyGift: 10
   multiplierFactor: 0.5
   healthInc: 15

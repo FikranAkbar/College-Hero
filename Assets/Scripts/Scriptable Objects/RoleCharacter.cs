@@ -6,6 +6,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(menuName = "Character/Role")]
 public class RoleCharacter : ScriptableObject
 {
+    public string type;
     public int moneyGift;
     public float multiplierFactor;
     public int healthInc;
