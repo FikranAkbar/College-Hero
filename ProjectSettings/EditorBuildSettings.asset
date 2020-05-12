@@ -5,18 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Mainmenu/StartScreen.unity
+    guid: 5dd428907f55b964fb4a3ebbebf886e7
   - enabled: 1
     path: Assets/Scenes/Mainmenu/ChooseRole.unity
     guid: 3dca0471c447dcb4b8813304e0fe372d
-  - enabled: 1
-    path: Assets/Scenes/Perkuliahan.unity
-    guid: 77ed51dc94325a34989bf0f3f6c5cf72
   - enabled: 1
     path: Assets/Scenes/Game/Maps_AreaKota.unity
     guid: 7ee8e8ff7e358d04c8559edae39cd3c7
