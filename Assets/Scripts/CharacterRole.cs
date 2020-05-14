@@ -48,4 +48,9 @@ public class CharacterRole : MonoBehaviour
     {
         Destroy(this);
     }
+
+    public RoleCharacter GetRoleStatus()
+    {
+        return role;
+    }
 }
