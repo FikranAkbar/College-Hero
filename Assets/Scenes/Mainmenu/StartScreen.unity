@@ -468,6 +468,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5169760158167819407, guid: 6a144997cbc2de741a0f5012f04b7194,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 424729925}
     - target: {fileID: 5169760158967861848, guid: 6a144997cbc2de741a0f5012f04b7194,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

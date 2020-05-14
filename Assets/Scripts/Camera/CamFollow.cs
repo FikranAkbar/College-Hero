@@ -5,6 +5,7 @@ using UnityEngine;
 public class CamFollow : MonoBehaviour
 {
     [SerializeField] Transform TargetToFollow;
+    [SerializeField] List<Vector2> mapBounds;
 
     private void Awake()
     {
