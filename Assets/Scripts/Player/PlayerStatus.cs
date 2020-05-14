@@ -2,9 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStatus : MonoBehaviour
 {
+    #region Status Variable
     [Header("Daily Status")]
     [SerializeField] int energy;
     [SerializeField] int largeFoodNeeds;
@@ -23,6 +25,15 @@ public class PlayerStatus : MonoBehaviour
     [SerializeField] int intelligencePoints;
     [SerializeField] int creativityLevel;
     [SerializeField] int creativityPoints;
+    #endregion
+
+    #region HUD Display
+    [Header("HUD Display")]
+    [SerializeField] Text moneyText;
+    [SerializeField] Text healthBarText;
+    [SerializeField] Text energyBarText;
+    [SerializeField] Text multiplierEffectText;
+    #endregion
 
     CharacterRole role;
 
@@ -41,7 +52,7 @@ public class PlayerStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        DisplayStatusOnHUD();
     }
 
     public void AssignNewPlayerStatus()
@@ -67,5 +78,13 @@ public class PlayerStatus : MonoBehaviour
         creativityLevel = 1;
         creativityPoints = 0;
         #endregion
+    }
+
+    public void DisplayStatusOnHUD()
+    {
+        moneyText.text = money.ToString();
+        healthBarText.text = health.ToString();
+        energyBarText.text = energy.ToString();
+        multiplierEffectText.text = damageMultiplier.ToString();
     }
 }

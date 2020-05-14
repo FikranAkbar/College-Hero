@@ -8,6 +8,7 @@ public class CharacterRole : MonoBehaviour
     bool roleAssigned = false;
 
     RoleCharacter role;
+    string namePlayer;
 
     private void Awake()
     {
@@ -52,5 +53,10 @@ public class CharacterRole : MonoBehaviour
     public RoleCharacter GetRoleStatus()
     {
         return role;
+    }
+
+    public void AssignName()
+    {
+
     }
 }
