@@ -15,10 +15,11 @@ public class AllRoleInformation : MonoBehaviour
     [SerializeField] Image roleImage;
     [SerializeField] Text roleDescription;
 
+    CharacterRole role;
     // Start is called before the first frame update
     void Start()
     {
-        
+        role = FindObjectOfType<CharacterRole>();
     }
 
     // Update is called once per frame
@@ -50,5 +51,10 @@ public class AllRoleInformation : MonoBehaviour
         {
             currentRoleIndex = 2;
         }
+    }
+
+    public void GoToGameScene()
+    {
+        role.AssignRole(roles[currentRoleIndex]);
     }
 }

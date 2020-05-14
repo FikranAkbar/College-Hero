@@ -695,7 +695,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 649901926}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1199243865}
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2101815532}
+        m_MethodName: GoToGameScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &649901926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1666,6 +1688,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c006c6f1bfb673d44b2c424163141652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &4978105535470533393
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4978105536315071130, guid: 55f2f9b6b4427fe48b9010f44a6fb82a,
+        type: 3}
+      propertyPath: m_Name
+      value: CharacterRole
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978105536315071132, guid: 55f2f9b6b4427fe48b9010f44a6fb82a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.74087
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978105536315071132, guid: 55f2f9b6b4427fe48b9010f44a6fb82a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.85579556
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978105536315071132, guid: 55f2f9b6b4427fe48b9010f44a6fb82a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.913331
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978105536315071132, guid: 55f2f9b6b4427fe48b9010f44a6fb82a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978105536315071132, guid: 55f2f9b6b4427fe48b9010f44a6fb82a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978105536315071132, guid: 55f2f9b6b4427fe48b9010f44a6fb82a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978105536315071132, guid: 55f2f9b6b4427fe48b9010f44a6fb82a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978105536315071132, guid: 55f2f9b6b4427fe48b9010f44a6fb82a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978105536315071132, guid: 55f2f9b6b4427fe48b9010f44a6fb82a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978105536315071132, guid: 55f2f9b6b4427fe48b9010f44a6fb82a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978105536315071132, guid: 55f2f9b6b4427fe48b9010f44a6fb82a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 55f2f9b6b4427fe48b9010f44a6fb82a, type: 3}
 --- !u!1001 &6342663591030593435
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1735,14 +1826,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6342663589876842359, guid: 67d969571aa6d174bb79f0e5e83a71e0,
         type: 3}
-      propertyPath: roleImage
-      value: 
-      objectReference: {fileID: 410083683}
-    - target: {fileID: 6342663589876842359, guid: 67d969571aa6d174bb79f0e5e83a71e0,
-        type: 3}
       propertyPath: roleText
       value: 
       objectReference: {fileID: 2081987828}
+    - target: {fileID: 6342663589876842359, guid: 67d969571aa6d174bb79f0e5e83a71e0,
+        type: 3}
+      propertyPath: roleImage
+      value: 
+      objectReference: {fileID: 410083683}
     - target: {fileID: 6342663589876842359, guid: 67d969571aa6d174bb79f0e5e83a71e0,
         type: 3}
       propertyPath: roleDescription
