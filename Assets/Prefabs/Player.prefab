@@ -192,6 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b2c3869c588bb48a167c9248f48823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: 
   energy: 0
   largeFoodNeeds: 0
   days: 0
@@ -205,8 +206,10 @@ MonoBehaviour:
   intelligencePoints: 0
   creativityLevel: 0
   creativityPoints: 0
+  greetingText: {fileID: 0}
   moneyText: {fileID: 0}
-  healthBarText: {fileID: 0}
-  energyBarText: {fileID: 0}
-  multiplierEffectText: {fileID: 0}
   healthBarSlider: {fileID: 0}
+  energyBarSlider: {fileID: 0}
+  multiplierEffectText: {fileID: 0}
+  playerStatusPanel: {fileID: 0}
+  playerStatusIsDisplayed: 0

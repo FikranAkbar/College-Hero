@@ -11,6 +11,7 @@ public class ChooseRoleFlow : MonoBehaviour
     public void ShowInputName()
     {
         inputNamePanel.SetActive(true);
+        inputNamePanel.GetComponentInChildren<InputField>().text = "";
     }
 
     public void HideInputName()

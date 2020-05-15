@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class PlayerStatus : MonoBehaviour
@@ -39,12 +40,20 @@ public class PlayerStatus : MonoBehaviour
     [SerializeField] Text multiplierEffectText;
     #endregion
 
+    #region Panels
+    [Header("Panels")]
+    [SerializeField] GameObject playerStatusPanel;
+    [SerializeField] bool playerStatusIsDisplayed = false;
+    [SerializeField] EventSystem eventSystem;
+    #endregion
+
     CharacterRole role;
 
     private void Awake()
     {
         role = FindObjectOfType<CharacterRole>();
         AssignNewPlayerStatus();
+        DontDestroyOnLoad(eventSystem);
     }
 
     // Start is called before the first frame update
@@ -57,6 +66,10 @@ public class PlayerStatus : MonoBehaviour
     void Update()
     {
         DisplayStatusOnHUD();
+        if (playerStatusIsDisplayed)
+        {
+            // write something to display in UI;
+        }
     }
 
     public void AssignNewPlayerStatus()
@@ -93,5 +106,17 @@ public class PlayerStatus : MonoBehaviour
         healthBarSlider.value = health / 100f;
         energyBarSlider.value = energy / 100f;
         multiplierEffectText.text = damageMultiplier.ToString();
+    }
+
+    public void ShowPlayerStatusPanel()
+    {
+        playerStatusPanel.SetActive(true);
+        playerStatusIsDisplayed = true;
+    }
+
+    public void HidePlayerStatusPanel()
+    {
+        playerStatusPanel.SetActive(false);
+        playerStatusIsDisplayed = false;
     }
 }
