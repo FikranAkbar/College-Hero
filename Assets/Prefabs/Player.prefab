@@ -209,3 +209,4 @@ MonoBehaviour:
   healthBarText: {fileID: 0}
   energyBarText: {fileID: 0}
   multiplierEffectText: {fileID: 0}
+  healthBarSlider: {fileID: 0}

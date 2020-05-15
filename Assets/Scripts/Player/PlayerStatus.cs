@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class PlayerStatus : MonoBehaviour
 {
     #region Status Variable
+
+    [SerializeField] string playerName;
+
     [Header("Daily Status")]
     [SerializeField] int energy;
     [SerializeField] int largeFoodNeeds;
@@ -30,8 +33,8 @@ public class PlayerStatus : MonoBehaviour
     #region HUD Display
     [Header("HUD Display")]
     [SerializeField] Text moneyText;
-    [SerializeField] Text healthBarText;
-    [SerializeField] Text energyBarText;
+    [SerializeField] Slider healthBarSlider;
+    [SerializeField] Slider energyBarSlider;
     [SerializeField] Text multiplierEffectText;
     #endregion
 
@@ -57,6 +60,8 @@ public class PlayerStatus : MonoBehaviour
 
     public void AssignNewPlayerStatus()
     {
+        playerName = role.AssignName();
+
         #region Assign Daily Status
         energy = 100;
         largeFoodNeeds = 0;
@@ -83,8 +88,8 @@ public class PlayerStatus : MonoBehaviour
     public void DisplayStatusOnHUD()
     {
         moneyText.text = money.ToString();
-        healthBarText.text = health.ToString();
-        energyBarText.text = energy.ToString();
+        healthBarSlider.value = health / 100f;
+        energyBarSlider.value = energy / 100f;
         multiplierEffectText.text = damageMultiplier.ToString();
     }
 }

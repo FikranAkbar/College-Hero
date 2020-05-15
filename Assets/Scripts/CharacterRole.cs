@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterRole : MonoBehaviour
 {
 
-    bool roleAssigned = false;
-
-    RoleCharacter role;
     string namePlayer;
+    bool roleAssigned = false;
+    RoleCharacter role;
+
+    [SerializeField] InputField nameInput;
+
 
     private void Awake()
     {
@@ -31,12 +34,7 @@ public class CharacterRole : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (roleAssigned)
-        {
-            Debug.Log("Health Inc: " + role.healthInc);
-            Debug.Log("Money: " + role.moneyGift);
-            Debug.Log("Multiplier Factor: " + role.multiplierFactor);
-        }
+        namePlayer = nameInput.text;
     }
 
     public void AssignRole(RoleCharacter role)
@@ -55,8 +53,8 @@ public class CharacterRole : MonoBehaviour
         return role;
     }
 
-    public void AssignName()
+    public string AssignName()
     {
-
+        return namePlayer;
     }
 }
