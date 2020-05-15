@@ -32,6 +32,7 @@ public class PlayerStatus : MonoBehaviour
 
     #region HUD Display
     [Header("HUD Display")]
+    [SerializeField] Text greetingText;
     [SerializeField] Text moneyText;
     [SerializeField] Slider healthBarSlider;
     [SerializeField] Slider energyBarSlider;
@@ -87,6 +88,7 @@ public class PlayerStatus : MonoBehaviour
 
     public void DisplayStatusOnHUD()
     {
+        greetingText.text = "Hello, " + playerName;
         moneyText.text = money.ToString();
         healthBarSlider.value = health / 100f;
         energyBarSlider.value = energy / 100f;
