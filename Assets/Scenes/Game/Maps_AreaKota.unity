@@ -196,28 +196,32 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 10578213, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 228713365, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 341678871, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 93312361}
+    - target: {fileID: 1067608416, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1779136357, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1988879670, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2207065868519801989, guid: adb87cddcc443cb449c66c9d1b85d789,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3388115443946859308, guid: adb87cddcc443cb449c66c9d1b85d789,
         type: 3}
@@ -337,7 +341,7 @@ PrefabInstance:
     - target: {fileID: 4966296581772526716, guid: adb87cddcc443cb449c66c9d1b85d789,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6697862218656119129, guid: adb87cddcc443cb449c66c9d1b85d789,
         type: 3}
@@ -412,6 +416,42 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 341678864}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &341678871 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3657054439830679909, guid: adb87cddcc443cb449c66c9d1b85d789,
+    type: 3}
+  m_PrefabInstance: {fileID: 341678864}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &341678872 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3657054440521875223, guid: adb87cddcc443cb449c66c9d1b85d789,
+    type: 3}
+  m_PrefabInstance: {fileID: 341678864}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &341678873 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3657054441151523989, guid: adb87cddcc443cb449c66c9d1b85d789,
+    type: 3}
+  m_PrefabInstance: {fileID: 341678864}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &923552508
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +572,7 @@ GameObject:
   m_Component:
   - component: {fileID: 989481541}
   - component: {fileID: 989481542}
+  - component: {fileID: 989481543}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -565,6 +606,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c2d43fd35365144a5da3a81ba47ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &989481543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989481540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2898927512b34f64eac7ef0040a847df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dayText: {fileID: 341678873}
+  clockText: {fileID: 341678872}
+  dateText: {fileID: 341678871}
 --- !u!1 &1435059670
 GameObject:
   m_ObjectHideFlags: 0
