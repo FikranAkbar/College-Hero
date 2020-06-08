@@ -194,18 +194,43 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 10578213, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202385851, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 228713365, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1067608416, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1183894960, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1779136357, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1988879670, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2035328380, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7031549913452880306}
+    - target: {fileID: 2207065868519801989, guid: adb87cddcc443cb449c66c9d1b85d789,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3388115443946859308, guid: adb87cddcc443cb449c66c9d1b85d789,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -326,6 +351,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7031549913452880306}
+    - target: {fileID: 3797320584983124878, guid: adb87cddcc443cb449c66c9d1b85d789,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966296581772526716, guid: adb87cddcc443cb449c66c9d1b85d789,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6697862218656119129, guid: adb87cddcc443cb449c66c9d1b85d789,
         type: 3}
       propertyPath: m_AnchorMax.y
