@@ -40,20 +40,13 @@ public class PlayerStatus : MonoBehaviour
     [SerializeField] Text multiplierEffectText;
     #endregion
 
-    #region Panels
-    [Header("Panels")]
-    [SerializeField] GameObject playerStatusPanel;
-    [SerializeField] bool playerStatusIsDisplayed = false;
-    [SerializeField] EventSystem eventSystem;
-    #endregion
 
-    CharacterRole role;
+    public CharacterRole role;
 
     private void Awake()
     {
         role = FindObjectOfType<CharacterRole>();
         AssignNewPlayerStatus();
-        DontDestroyOnLoad(eventSystem);
     }
 
     // Start is called before the first frame update
@@ -66,10 +59,6 @@ public class PlayerStatus : MonoBehaviour
     void Update()
     {
         DisplayStatusOnHUD();
-        if (playerStatusIsDisplayed)
-        {
-            // write something to display in UI;
-        }
     }
 
     public void AssignNewPlayerStatus()
@@ -108,15 +97,103 @@ public class PlayerStatus : MonoBehaviour
         multiplierEffectText.text = damageMultiplier.ToString();
     }
 
-    public void ShowPlayerStatusPanel()
+    #region GetterSetter Variabel
+    public string Get_PlayerName()
     {
-        playerStatusPanel.SetActive(true);
-        playerStatusIsDisplayed = true;
+        return playerName;
+    }
+    // Daily Status
+    public int Get_Energy()
+    {
+        return energy;
+    }
+    public void Set_Energy(int value)
+    {
+        energy = energy + value;
+    }
+    public int Get_LargeFoodNeeds()
+    {
+        return largeFoodNeeds;
+    }
+    public void Set_LargeFoodNeeds(int value)
+    {
+        largeFoodNeeds = largeFoodNeeds + value;
+    }
+    public int Get_Money()
+    {
+        return money;
+    }
+    public void Set_Money(int value)
+    {
+        money = money + value;
     }
 
-    public void HidePlayerStatusPanel()
+    // Health Status
+    public int Get_Health()
     {
-        playerStatusPanel.SetActive(false);
-        playerStatusIsDisplayed = false;
+        return health;
     }
+    public void Set_Health(int value)
+    {
+        health = health + value;
+    }
+    public string Get_TypeOfDisease()
+    {
+        return typeOfDisease;
+    }
+    public void Set_TypeOfDisease(int value)
+    {
+        typeOfDisease = typeOfDisease + value;
+    }
+    public int Get_PercentageOfIllness()
+    {
+        return percentageOfIllness;
+    }
+    public void Set_PercentageOfIllness(int value)
+    {
+        percentageOfIllness = percentageOfIllness + value;
+    }
+    public float Get_DamageMultiplier()
+    {
+        return damageMultiplier;
+    }
+    public void Set_DamageMultiplier(float value)
+    {
+        damageMultiplier = value;
+    }
+
+    // Lecture Status
+    public int Get_IntelligencePoints()
+    {
+        return intelligencePoints;
+    }
+    public void Set_IntelligencePoints(int value)
+    {
+        intelligencePoints = intelligencePoints + value;
+    }
+    public int Get_IntelligenceLevel()
+    {
+        return intelligenceLevel;
+    }
+    public void Set_IntelligenceLevel(int value)
+    {
+        intelligenceLevel = value;
+    }
+    public int Get_CreativityPoints()
+    {
+        return creativityPoints;
+    }
+    public void Set_CreativityPoints(int value)
+    {
+        creativityPoints = creativityPoints + value;
+    }
+    public int Get_CreativityLevel()
+    {
+        return creativityLevel;
+    }
+    public void Set_CreativityLevel(int value)
+    {
+        creativityLevel = creativityLevel + value;
+    }
+    #endregion
 }
