@@ -19,6 +19,8 @@ TagManager:
   - KosToKamarKos
   - KosTo1
   - UpgradeKamarKos
+  - 1ToTempatMakan
+  - TempatMakanTo1
   layers:
   - Default
   - TransparentFX

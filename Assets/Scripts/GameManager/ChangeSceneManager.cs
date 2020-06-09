@@ -30,6 +30,7 @@ public class ChangeSceneManager : MonoBehaviour
         // Area Kota
         spawnLocation.Add("2To1", new Vector2(11.5f, -0.86f));
         spawnLocation.Add("3To1", new Vector2(-2.08f, -7.07f));
+        spawnLocation.Add("TempatMakanTo1", new Vector2(8.28f, -0.5f));
         // Area Taman
         spawnLocation.Add("1To2", new Vector2(-12.39f, -0.53f));
         spawnLocation.Add("3To2", new Vector2(-5.8f, -7.28f));
@@ -45,6 +46,8 @@ public class ChangeSceneManager : MonoBehaviour
         spawnLocation.Add("KamarKosToKos", new Vector2(-2.64f, 2.32f));
         // Area Kamar Kos
         spawnLocation.Add("KosToKamarKos", new Vector2(1.72f, -2.91f));
+        // Area Tempat Makan
+        spawnLocation.Add("1ToTempatMakan", new Vector2(11.15f, -2.8f));
     }
 
     // Update is called once per frame
@@ -104,6 +107,23 @@ public class ChangeSceneManager : MonoBehaviour
             {
                 Initiate.Fade("Maps_Kos", Color.black, 2.0f);
                 toPos = "1ToKos";
+            }
+            else if(to == "TempatMakan")
+            {
+                Initiate.Fade("Maps_Warteg", Color.black, 2.0f);
+                toPos = "1ToTempatMakan";
+            }
+        }
+    }
+
+    public static void ChangeArea_IndoorToOutdoor(string from, int to)
+    {
+        if(from == "TempatMakan")
+        {
+            if(to == 1)
+            {
+                Initiate.Fade("Maps_AreaKota", Color.black, 2.0f);
+                toPos = "TempatMakanTo1";
             }
         }
     }
