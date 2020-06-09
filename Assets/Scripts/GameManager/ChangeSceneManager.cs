@@ -34,6 +34,7 @@ public class ChangeSceneManager : MonoBehaviour
         // Area Taman
         spawnLocation.Add("1To2", new Vector2(-12.39f, -0.53f));
         spawnLocation.Add("3To2", new Vector2(-5.8f, -7.28f));
+        spawnLocation.Add("ApotekTo2", new Vector2(10.82f, -6.48f));
         // Area Universitas
         spawnLocation.Add("1To3", new Vector2(-13.68f, 9.47f));
         spawnLocation.Add("2To3", new Vector2(13.94f, 9.47f));
@@ -48,6 +49,8 @@ public class ChangeSceneManager : MonoBehaviour
         spawnLocation.Add("KosToKamarKos", new Vector2(1.72f, -2.91f));
         // Area Tempat Makan
         spawnLocation.Add("1ToTempatMakan", new Vector2(11.15f, -2.8f));
+        // Area Apotek
+        spawnLocation.Add("2ToApotek", new Vector2(-7.42f, -1.95f));
     }
 
     // Update is called once per frame
@@ -114,6 +117,14 @@ public class ChangeSceneManager : MonoBehaviour
                 toPos = "1ToTempatMakan";
             }
         }
+        if(from == 2)
+        {
+            if(to == "Apotek")
+            {
+                Initiate.Fade("Maps_Apotek", Color.black, 2.0f);
+                toPos = "2ToApotek";
+            }
+        }
     }
 
     public static void ChangeArea_IndoorToOutdoor(string from, int to)
@@ -124,6 +135,14 @@ public class ChangeSceneManager : MonoBehaviour
             {
                 Initiate.Fade("Maps_AreaKota", Color.black, 2.0f);
                 toPos = "TempatMakanTo1";
+            }
+        }
+        if(from == "Apotek")
+        {
+           if(to == 2)
+            {
+                Initiate.Fade("Maps_AreaTaman", Color.black, 2.0f);
+                toPos = "ApotekTo2";
             }
         }
     }

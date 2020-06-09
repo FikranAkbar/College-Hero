@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CharacterRole : MonoBehaviour
@@ -34,7 +35,10 @@ public class CharacterRole : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        namePlayer = nameInput.text;
+        if(SceneManager.GetActiveScene().name == "ChooseRole")
+        {
+            namePlayer = nameInput.text;
+        }
     }
 
     public void AssignRole(RoleCharacter role)

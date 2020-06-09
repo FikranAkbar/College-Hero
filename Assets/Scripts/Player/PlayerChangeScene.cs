@@ -62,5 +62,13 @@ public class PlayerChangeScene : MonoBehaviour
         {
             ChangeSceneManager.ChangeArea_IndoorToOutdoor("TempatMakan", 1);
         }
+        else if (collision.tag == "2ToApotek")
+        {
+            ChangeSceneManager.ChangeArea_OutdoorToIndoor(2, "Apotek");
+        }
+        else if (collision.tag == "ApotekTo2")
+        {
+            ChangeSceneManager.ChangeArea_IndoorToOutdoor("Apotek", 2);
+        }
     }
 }

@@ -21,6 +21,8 @@ TagManager:
   - UpgradeKamarKos
   - 1ToTempatMakan
   - TempatMakanTo1
+  - 2ToApotek
+  - ApotekTo2
   layers:
   - Default
   - TransparentFX
