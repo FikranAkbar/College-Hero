@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -6360244676805673312, guid: 52161c20dc0052c47bdc67801098851b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -211,5 +211,4 @@ MonoBehaviour:
   healthBarSlider: {fileID: 0}
   energyBarSlider: {fileID: 0}
   multiplierEffectText: {fileID: 0}
-  playerStatusPanel: {fileID: 0}
-  playerStatusIsDisplayed: 0
+  role: {fileID: 0}

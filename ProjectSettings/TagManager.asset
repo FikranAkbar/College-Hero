@@ -10,6 +10,15 @@ TagManager:
   - 2To3
   - 3To1
   - 3To2
+  - ToKos
+  - Cook
+  - Study
+  - Sleep
+  - ChangeClothes
+  - KamarKosToKos
+  - KosToKamarKos
+  - KosTo1
+  - UpgradeKamarKos
   layers:
   - Default
   - TransparentFX
