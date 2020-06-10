@@ -33,6 +33,9 @@ TagManager:
   - TempatMakanTo3_AreaUniversitas
   - 3ToMinimarket_AreaUniversitas
   - MinimarketTo3_AreaUniversitas
+  - UniversitasTo3
+  - 3ToUniversitas
+  - GoLecture
   layers:
   - Default
   - TransparentFX

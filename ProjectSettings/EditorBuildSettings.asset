@@ -33,6 +33,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game/Maps_Minimarket_AreaTaman.unity
     guid: 9fa52af49e89865418b72adcbe68c26c
   - enabled: 1
+    path: Assets/Scenes/Game/Maps_Minimarket_AreaUniversitas.unity
+    guid: 2c5dab72e5b0e80418e3c5d8123f5fd1
+  - enabled: 1
     path: Assets/Scenes/Game/Maps_Universitas.unity
     guid: cebecef8926fc6742856ad93ef12e8b0
   - enabled: 1

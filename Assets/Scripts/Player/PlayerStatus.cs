@@ -45,6 +45,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(FindObjectOfType<EventSystem>());
         role = FindObjectOfType<CharacterRole>();
         AssignNewPlayerStatus();
     }

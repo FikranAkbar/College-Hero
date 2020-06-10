@@ -11,7 +11,7 @@ public class PlayerStatusPanel : MonoBehaviour
     [Header("Panel")]
     [SerializeField] GameObject playerStatusPanel;
     [SerializeField] bool playerStatusIsDisplayed = false;
-    [SerializeField] EventSystem eventSystem;
+    //[SerializeField] EventSystem eventSystem;
     #endregion
 
     #region PanelComponents
@@ -45,11 +45,13 @@ public class PlayerStatusPanel : MonoBehaviour
 
     PlayerStatus playerStat;
 
+    private void Awake()
+    {
+        playerStat = FindObjectOfType<PlayerStatus>();
+    }
+
     private void Start()
     {
-        DontDestroyOnLoad(eventSystem);
-        eventSystem = FindObjectOfType<EventSystem>();
-        playerStat = FindObjectOfType<PlayerStatus>();
     }
 
     private void Update()

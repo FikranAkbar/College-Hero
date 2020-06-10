@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerChangeScene : MonoBehaviour
@@ -80,6 +81,10 @@ public class PlayerChangeScene : MonoBehaviour
 
         #region Change: Indoor To Outdoor
         // Change Indoor To Outdoor
+        else if (collision.tag == "KosTo1")
+        {
+            ChangeSceneManager.ChangeArea_IndoorToOutdoor("Kos", 1);
+        }
         else if (collision.tag == "TempatMakanTo1_AreaKota")
         {
             ChangeSceneManager.ChangeArea_IndoorToOutdoor("TempatMakan", 1);
@@ -103,6 +108,15 @@ public class PlayerChangeScene : MonoBehaviour
         else if (collision.tag == "MinimarketTo3_AreaUniversitas")
         {
             ChangeSceneManager.ChangeArea_IndoorToOutdoor("Minimarket", 3);
+        }
+        else if (collision.tag == "3ToUniversitas")
+        {
+            ChangeSceneManager.ChangeArea_OutdoorToIndoor(3, "Universitas");
+
+        }
+        else if (collision.tag == "UniversitasTo3")
+        {
+            ChangeSceneManager.ChangeArea_IndoorToOutdoor("Universitas", 3);
         }
         #endregion
 
