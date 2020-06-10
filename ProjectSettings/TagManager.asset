@@ -19,10 +19,20 @@ TagManager:
   - KosToKamarKos
   - KosTo1
   - UpgradeKamarKos
-  - 1ToTempatMakan
-  - TempatMakanTo1
   - 2ToApotek
   - ApotekTo2
+  - 1ToTempatMakan_AreaKota
+  - TempatMakanTo1_AreaKota
+  - 2ToTempatMakan_AreaTaman
+  - TempatMakanTo2_AreaTaman
+  - Buy Medicine
+  - 2ToMinimarket_AreaTaman
+  - MinimarketTo2_AreaTaman
+  - Buy Ingridients
+  - 3ToTempatMakan_AreaUniversitas
+  - TempatMakanTo3_AreaUniversitas
+  - 3ToMinimarket_AreaUniversitas
+  - MinimarketTo3_AreaUniversitas
   layers:
   - Default
   - TransparentFX

@@ -133,8 +133,8 @@ GameObject:
   - component: {fileID: 391333579}
   - component: {fileID: 391333578}
   m_Layer: 0
-  m_Name: MoveToTaman
-  m_TagString: ApotekTo2
+  m_Name: MoveToUniversitas
+  m_TagString: MinimarketTo3_AreaUniversitas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -263,8 +263,8 @@ GameObject:
   - component: {fileID: 1847295988}
   - component: {fileID: 1847295987}
   m_Layer: 0
-  m_Name: Buy Medicine
-  m_TagString: ApotekTo2
+  m_Name: Buy Ingridients
+  m_TagString: Buy Ingridients
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
