@@ -10,4 +10,5 @@ public class Jobs : ScriptableObject
     public int creativReq;
     public int IntelReq;
     [TextArea] public string jobDescription;
+    public int salary;
 }

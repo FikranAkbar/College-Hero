@@ -194,6 +194,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 341678876, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
+      propertyPath: job.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 341678876, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
+      propertyPath: job.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3928974eb920f634c88e75a2efc41aee,
+        type: 2}
+    - target: {fileID: 341678876, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
+      propertyPath: job.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0283a0bade4a1ff4a95af308c166c43e,
+        type: 2}
+    - target: {fileID: 341678876, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
+      propertyPath: job.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3d866ed4a41a8b14f98839112e963f1c,
+        type: 2}
+    - target: {fileID: 341678876, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
+      propertyPath: job.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: d35a65528d8b2d14a8bd44d0026d26b8,
+        type: 2}
+    - target: {fileID: 341678876, guid: adb87cddcc443cb449c66c9d1b85d789, type: 3}
+      propertyPath: job.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: ad55baa5f342cc542ae66e645f1a7fc9,
+        type: 2}
+    - target: {fileID: 1322651043049586566, guid: adb87cddcc443cb449c66c9d1b85d789,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3388115443946859308, guid: adb87cddcc443cb449c66c9d1b85d789,
         type: 3}
       propertyPath: m_AnchorMax.y

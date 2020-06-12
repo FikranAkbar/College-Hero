@@ -88,7 +88,7 @@ public class PlayerStatusPanel : MonoBehaviour
     public void UpdatePlayerStatus(
         Sprite image,
         string name,
-        int energy,
+        float energy,
         int intPoint,
         int intLevel,
         int crePoint,

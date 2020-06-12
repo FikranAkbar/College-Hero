@@ -12,7 +12,7 @@ public class PlayerStatus : MonoBehaviour
     [SerializeField] string playerName;
 
     [Header("Daily Status")]
-    [SerializeField] int energy;
+    [SerializeField] float energy;
     [SerializeField] int largeFoodNeeds;
     [SerializeField] int days;
     [SerializeField] int money;
@@ -104,13 +104,17 @@ public class PlayerStatus : MonoBehaviour
         return playerName;
     }
     // Daily Status
-    public int Get_Energy()
+    public float Get_Energy()
     {
         return energy;
     }
-    public void Set_Energy(int value)
+    public void Set_Energy(float value)
     {
         energy = energy + value;
+    }
+    public void SetSpecific_Energy(float value)
+    {
+        energy = value;
     }
     public int Get_LargeFoodNeeds()
     {
@@ -127,6 +131,10 @@ public class PlayerStatus : MonoBehaviour
     public void Set_Money(int value)
     {
         money = money + value;
+    }
+    public void SetSpecific_Money(int value)
+    {
+        money = value;
     }
 
     // Health Status

@@ -9,7 +9,9 @@ public class JobDisplayManager : MonoBehaviour
     [Header("List Job")]
     public Jobs[] jobs;
     [Header("UI Panel")]
+    public GameObject JobUI;
     public GameObject JobPanel;
+    public GameObject JobProgressPanel;
     [Header("UI Element")]
     public Text jobName;
     public Text clothesReq;
@@ -19,9 +21,9 @@ public class JobDisplayManager : MonoBehaviour
     [Header("Job Duration")]
     public Text jobDuration;
     
-    int jobIndex = 0;
+    public static int jobIndex = 0;
     // in hours
-    int duration = 1; 
+    public static int duration = 1; 
 
     // job panel
 
@@ -77,10 +79,20 @@ public class JobDisplayManager : MonoBehaviour
     public void Duration_Plus()
     {
         duration++;
-        if (duration == 10)
+        if (duration == 6)
         {
-            duration = 9;
+            duration = 5;
         }
+    }
+
+    public void ShowJobUI()
+    {
+        JobUI.SetActive(true);
+    }
+
+    public void HideJobUI()
+    {
+        JobUI.SetActive(false);
     }
 
     public void ShowJobPanel()
@@ -91,5 +103,15 @@ public class JobDisplayManager : MonoBehaviour
     public void HideJobPanel()
     {
         JobPanel.SetActive(false);
+    }
+
+    public void ShowJobProgressPanel()
+    {
+        JobProgressPanel.SetActive(true);
+    }
+
+    public void HideJobProgressPanel()
+    {
+        JobProgressPanel.SetActive(false);
     }
 }
