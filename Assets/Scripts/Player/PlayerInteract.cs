@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerInteract : MonoBehaviour
 {
     [SerializeField] JobDisplayManager jobDisplay;
+    [SerializeField] LectureDisplayManager lectureDisplay;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,10 @@ public class PlayerInteract : MonoBehaviour
         if(collision.tag == "Work")
         {
             jobDisplay.ShowJobPanel();
+        }
+        else if(collision.tag == "GoLecture")
+        {
+            lectureDisplay.ShowLecturePanel();
         }
     }
 }

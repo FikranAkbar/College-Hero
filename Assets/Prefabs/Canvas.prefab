@@ -4333,7 +4333,7 @@ GameObject:
   - component: {fileID: 341678875}
   - component: {fileID: 341678883}
   m_Layer: 5
-  m_Name: PekerjaanUI
+  m_Name: JobUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5950,7 +5950,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Job Descriptions
+  m_Text: Lecture Descriptions
 --- !u!1 &3320747902002988202
 GameObject:
   m_ObjectHideFlags: 0
@@ -8991,10 +8991,10 @@ GameObject:
   - component: {fileID: 269800457449897905}
   - component: {fileID: 8917328534853326307}
   - component: {fileID: 439844164323750122}
-  - component: {fileID: 2129379374953713949}
+  - component: {fileID: 3490381029224641049}
   - component: {fileID: 2845713855362656585}
   m_Layer: 5
-  m_Name: PerkuliahanUI
+  m_Name: LectureUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9063,7 +9063,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2129379374953713949
+--- !u!114 &3490381029224641049
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9072,22 +9072,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 6480975889152187393}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96001ee2cd407ac4886f0cd5add950b2, type: 3}
+  m_Script: {fileID: 11500000, guid: da2b753b4c9e0244b814174f309b9de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jobs:
-  - {fileID: 11400000, guid: 3928974eb920f634c88e75a2efc41aee, type: 2}
-  - {fileID: 11400000, guid: 0283a0bade4a1ff4a95af308c166c43e, type: 2}
-  - {fileID: 11400000, guid: 3d866ed4a41a8b14f98839112e963f1c, type: 2}
-  - {fileID: 11400000, guid: d35a65528d8b2d14a8bd44d0026d26b8, type: 2}
-  - {fileID: 11400000, guid: ad55baa5f342cc542ae66e645f1a7fc9, type: 2}
-  JobPanel: {fileID: 6480975889152187393}
-  jobName: {fileID: 5772708764569025897}
-  clothesReq: {fileID: 7768843157356842349}
-  creativityReq: {fileID: 0}
-  intelligenceReq: {fileID: 0}
-  jobDescription: {fileID: 4526037417350840391}
-  jobDuration: {fileID: 0}
+  lectures:
+  - {fileID: 11400000, guid: 0bf47977844211442ac0f8289667e191, type: 2}
+  - {fileID: 11400000, guid: 02c038aea13c5f841adc4c71b11f5eeb, type: 2}
+  lecturePanel: {fileID: 6480975889152187393}
+  lectureType: {fileID: 5772708764569025897}
+  lectureSchedule: {fileID: 7768843157356842349}
+  lectureDescription: {fileID: 4526037417350840391}
 --- !u!114 &2845713855362656585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9131,8 +9125,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2129379374953713949}
-        m_MethodName: HideJobPanel
+      - m_Target: {fileID: 3490381029224641049}
+        m_MethodName: HideLecturePanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
