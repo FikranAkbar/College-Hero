@@ -26,7 +26,7 @@ public class PlayerInteract : MonoBehaviour
         }
         else if(collision.tag == "GoLecture")
         {
-            lectureDisplay.ShowLecturePanel();
+            lectureDisplay.ShowLectureUI();
         }
     }
 }

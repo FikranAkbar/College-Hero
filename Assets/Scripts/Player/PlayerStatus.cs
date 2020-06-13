@@ -178,6 +178,10 @@ public class PlayerStatus : MonoBehaviour
     }
     public void Set_IntelligencePoints(int value)
     {
+        intelligencePoints = value;
+    }
+    public void Set_SpecificIntelligencePoints(int value)
+    {
         intelligencePoints = intelligencePoints + value;
     }
     public int Get_IntelligenceLevel()
@@ -193,6 +197,10 @@ public class PlayerStatus : MonoBehaviour
         return creativityPoints;
     }
     public void Set_CreativityPoints(int value)
+    {
+        creativityPoints = value;
+    }
+    public void Set_SpecificCreativityPoints(int value)
     {
         creativityPoints = creativityPoints + value;
     }

@@ -8,13 +8,15 @@ public class LectureDisplayManager : MonoBehaviour
     [Header("List Lectures")]
     public Lectures[] lectures;
     [Header("UI Panel")]
-    public GameObject lecturePanel;
+    public GameObject LectureUI;
+    public GameObject LectureInfoPanel;
+    public GameObject LectureProgressPanel;
     [Header("UI Element")]
     public Text lectureType;
     public Text lectureSchedule;
     public Text lectureDescription;
 
-    int lectureIndex = 0;
+    public static int lectureIndex = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -34,14 +36,33 @@ public class LectureDisplayManager : MonoBehaviour
         lectureSchedule.text = lectures[lectureIndex].lectureSchedule;
         lectureDescription.text = lectures[lectureIndex].lectureDescription;
     }
-
-    public void ShowLecturePanel()
+    public void ShowLectureUI()
     {
-        lecturePanel.SetActive(true);
+        LectureUI.SetActive(true);
     }
 
-    public void HideLecturePanel()
+    public void HideLectureUI()
     {
-        lecturePanel.SetActive(false);
+        LectureUI.SetActive(false);
+    }
+
+    public void ShowLectureInfoPanel()
+    {
+        LectureInfoPanel.SetActive(true);
+    }
+
+    public void HideLectureInfoPanel()
+    {
+        LectureInfoPanel.SetActive(false);
+    }
+
+    public void ShowLectureProgressPanel()
+    {
+        LectureProgressPanel.SetActive(true);
+    }
+
+    public void HideLectureProgressPanel()
+    {
+        LectureProgressPanel.SetActive(false);
     }
 }

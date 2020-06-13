@@ -8,11 +8,10 @@ public class TimeSystem : MonoBehaviour
 {
     [Header("Time Attribute")]
     List<int> dayOfMonth;
-    List<string> dayName;
+    public static List<string> dayName;
     List<string> monthName;
     int days = 1;
-    int day = 1;
-    string daysText;
+    public static int day = 1;
     int months= 0;
     float minutes;
     string minutesText;
@@ -25,13 +24,12 @@ public class TimeSystem : MonoBehaviour
     [SerializeField] Text clockText;
     [SerializeField] Text dateText;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         dayOfMonth = new List<int>()
         {
             31, 28, 31, 30, 31, 30,
-            31, 31, 30, 31, 30, 31 
+            31, 31, 30, 31, 30, 31
         };
         dayName = new List<string>()
         {
@@ -50,6 +48,13 @@ public class TimeSystem : MonoBehaviour
             "July", "August", "September",
             "October", "November", "December"
         };
+        ChangeLectureClass();
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
@@ -73,9 +78,9 @@ public class TimeSystem : MonoBehaviour
             hours = 0;
             days++;
             day++;
-            if(day > 7)
+            if(day > dayName.Count - 1)
             {
-                day = 1;
+                day = 0;
             }
             if (days > dayOfMonth[months])
             {
@@ -107,5 +112,28 @@ public class TimeSystem : MonoBehaviour
         }
         clockText.text = hoursText + " : " + minutesText;
         dateText.text = days + " " + monthName[months] + " " + "2018";
+    }
+
+    public void StartTheDay()
+    {
+        days++;
+        ChangeLectureClass();
+        hours = 5;
+    }
+
+    public void ChangeLectureClass()
+    {
+        if ( dayName[day] == "Monday" ||
+             dayName[day] == "Wednesday" || 
+             dayName[day] == "Friday")
+        {
+            LectureDisplayManager.lectureIndex = 0;
+        }
+        else if (dayName[day] == "Tuesday" ||
+             dayName[day] == "Thursday" ||
+             dayName[day] == "Saturday")
+        {
+            LectureDisplayManager.lectureIndex = 1;
+        }
     }
 }
