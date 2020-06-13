@@ -23,9 +23,9 @@ public class JobDisplayManager : MonoBehaviour
     
     public static int jobIndex = 0;
     // in hours
-    public static int duration = 1; 
+    public static int duration = 1;
 
-    // job panel
+    PlayerStatus playerStatus;
 
     // Start is called before the first frame update
     void Start()
@@ -114,4 +114,5 @@ public class JobDisplayManager : MonoBehaviour
     {
         JobProgressPanel.SetActive(false);
     }
+
 }

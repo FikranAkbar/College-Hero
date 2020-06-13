@@ -102,7 +102,7 @@ public class PlayerStatusPanel : MonoBehaviour
         // Adjust Header Information
         ImageHolder.sprite = image;
         nameText.text = name;
-        energyBar.value = energy;
+        energyBar.value = energy / 100f;
         energyText.text = energy + " %";
 
         // Adjust Intelligence Information

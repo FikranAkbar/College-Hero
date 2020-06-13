@@ -19,44 +19,52 @@ public class JobProgressManager : MonoBehaviour
     public Slider LoadingBar;
     public Text LoadingText;
 
+    [Header("Salary")]
+    [SerializeField] int money;
+    [SerializeField] int currentMoney;
+    
+    [Header("Working Time")]
     [SerializeField] int index;
     [SerializeField] float workingDuration;
     [SerializeField] float duration;
     
-    [SerializeField] int money;
-    [SerializeField] int currentMoney;
-
-    [SerializeField] float decreasingSpeed = 10;
-
+    [Header("Energy")]
+    [SerializeField] float decreasingSpeed = 40f;
     [SerializeField] float energyDecreasing;
     [SerializeField] float currentEnergy;
     
-
     PlayerStatus playerStatus;
+    JobDisplayManager jobDisplay;
+    float timeToBack = 3f;
 
+    private void Awake()
+    {
+        playerStatus = FindObjectOfType<PlayerStatus>();
+        jobDisplay = FindObjectOfType<JobDisplayManager>();
+    }
     // Start is called before the first frame update
     void Start()
     {
-        index = JobDisplayManager.jobIndex;
-        workingDuration = JobDisplayManager.duration;
-        playerStatus = FindObjectOfType<PlayerStatus>();
-        currentEnergy = playerStatus.Get_Energy();
-        currentMoney = playerStatus.Get_Money();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            LoadingBar.value = 0;
-        }
         LoadingBarProgress();
     }
 
     public void LoadingBarProgress()
     {
         duration -= Time.fixedDeltaTime * decreasingSpeed * (1/workingDuration);
+        if(LoadingBar.value == LoadingBar.minValue)
+        {
+            currentEnergy = playerStatus.Get_Energy();
+            currentMoney = playerStatus.Get_Money();
+            index = JobDisplayManager.jobIndex;
+            workingDuration = JobDisplayManager.duration;
+        }
+
         if(duration <= 0)
         {
             LoadingBar.value += Time.fixedDeltaTime;
@@ -64,6 +72,18 @@ public class JobProgressManager : MonoBehaviour
             LoadingText.text = (int)(LoadingBar.value * 100) + " %";
             MoneyIncrement();
             EnergyDecreament();
+        }
+        
+        if(LoadingBar.value == LoadingBar.maxValue)
+        {
+            timeToBack -= Time.fixedDeltaTime;
+            if (timeToBack <= 0)
+            {
+                timeToBack = 3f;
+                LoadingBar.value = 0;
+                jobDisplay.ShowJobPanel();
+                jobDisplay.HideJobProgressPanel();
+            }
         }
     }
 
@@ -80,6 +100,6 @@ public class JobProgressManager : MonoBehaviour
         energyDecreasing = LoadingBar.value / LoadingBar.maxValue * 10 * workingDuration;
         playerStatus.SetSpecific_Energy(currentEnergy - energyDecreasing);
         EnergyBar.value = playerStatus.Get_Energy() / 100f;
-        EnergyPercentage.text = playerStatus.Get_Energy() + "";
+        EnergyPercentage.text = (int)playerStatus.Get_Energy() + "";
     }
 }
